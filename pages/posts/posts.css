@@ -1,0 +1,7 @@
+.rich-text p {
+	@apply mb-4;
+}
+	
+.rich-text	ul {
+	@apply list-disc ml-4 mb-4 pl-0.5;
+}
