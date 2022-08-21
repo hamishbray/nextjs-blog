@@ -1,9 +1,30 @@
+const UnoCSS = require('@unocss/webpack').default;
+const presetUno = require('@unocss/preset-uno').default;
+const transformerDirectives = require('@unocss/transformer-directives').default;
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
     nextScriptWorkers: true,
   },
+  // webpack(config, context) {
+  //   config.plugins.push(
+  //     UnoCSS({
+  //       presets: [presetUno()],
+  //       transformers: [transformerDirectives()],
+  //     })
+  //   );
+
+  //   if (context.buildId !== 'development') {
+  //     // * disable filesystem cache for build
+  //     // * https://github.com/unocss/unocss/issues/419
+  //     // * https://webpack.js.org/configuration/cache/
+  //     config.cache = false;
+  //   }
+
+  //   return config;
+  // },
 };
 
 module.exports = nextConfig;
