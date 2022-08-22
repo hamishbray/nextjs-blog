@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData, PostData } from '../../lib/posts';
 import { format, parseISO } from 'date-fns';
-
+import styles from './posts.module.css';
 type Props = {
   postData: PostData;
 };
@@ -18,7 +18,7 @@ const Post: NextPage<Props> = ({ postData }: Props) => (
     <main className="container flex flex-col items-center justify-center min-h-screen px-5 mx-auto">
       <h1 className="mb-4 text-4xl">{postData.title}</h1>
       <p className="mb-8">Posted: {postData.date && format(parseISO(postData.date), 'do MMMM y')}</p>
-      {postData.contentHtml && <div className="rich-text" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />}
+      {postData.contentHtml && <div className={styles['rich-text']} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />}
     </main>
   </Layout>
 );
