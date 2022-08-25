@@ -12,7 +12,7 @@ const FirstPost: NextPage = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <main className="container mx-auto px-5 min-h-screen flex flex-col justify-center items-center">
+    <main className="container flex flex-col items-center justify-center min-h-screen px-5 mx-auto">
       <h1 className="text-4xl">First Post</h1>
       <p>
         Return{' '}

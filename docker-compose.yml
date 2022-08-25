@@ -1,0 +1,18 @@
+# docker-compose up --build --force-recreate
+version: '3'
+
+services:
+  app:
+    image: docker-nextjs-dev
+    build: .
+    ports: 
+      - 3000:3000
+    volumes:
+      - ./components:/app/components
+      - ./lib:/app/lib
+      - ./pages:/app/pages
+      - ./pages/api:/app/pages/api
+      - ./pages/gallery:/app/pages/gallery
+      - ./pages/posts:/app/pages/posts
+      - ./posts:/app/posts
+      - ./styles:/app/styles

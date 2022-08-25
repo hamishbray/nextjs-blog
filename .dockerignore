@@ -1,0 +1,13 @@
+.dockerignore
+.eslint.json
+docker-compose.production.yml
+docker-compose.yml
+Dockerfile
+Dockerfile.production
+next-env.d.ts
+npm-debug.log
+README.md
+
+.next
+.git
+node_modules
