@@ -1,4 +1,4 @@
-# docker-compose up --build --force-recreate
+# docker compose up --build --force-recreate
 version: '3'
 
 services:
